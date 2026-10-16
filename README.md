@@ -1,122 +1,135 @@
-# 🤖 AI-Powered Smart Hiring Assistant
+# Resume Analyzer 2.0
 
-### ATS Resume Analyzer with AI Insights
+### AI-Powered Resume Analysis, Candidate Screening & Career Guidance
 
-An AI-powered web application that analyzes resumes against specific job descriptions, calculates ATS compatibility, identifies matching and missing skills, evaluates resume readability, and provides actionable improvement suggestions.
+Resume Analyzer 2.0 is a web application that evaluates resumes against job descriptions, helps recruiters compare multiple candidates, and provides personalized skill-gap and career-learning recommendations.
 
-## 🚀 Live Demo
+The system combines individual resume analysis with batch candidate screening while keeping resume readability separate from job-specific matching.
 
-👉 https://resume-analyzer-ai-i9ft.onrender.com/
+## Features
 
-## 📂 Source Code
+### 1. Single Resume Analysis
+- Upload resumes in PDF and DOCX formats.
+- Analyze a resume against a job description.
+- Calculate resume readability and job-match scores.
+- Identify matched and missing skills.
+- Categorize technical skills, soft skills, and tools.
+- Detect formatting issues and provide improvement suggestions.
+- Display analysis charts and AI-assisted suggestions when configured.
 
-👉 https://github.com/Vignesh-130/Resume-Analyzer-AI
+### 2. Batch Candidate Screening
+- Upload multiple resumes for a job opening.
+- Configure the number of candidates to shortlist.
+- Set job-related eligibility criteria.
+- Rank candidates by job-match score.
+- Categorize results as Selected, Eligible but Not Selected, Low Match, or Processing Failed.
+- Search, filter, and review candidate rankings.
+- Display explanations for selection outcomes.
 
----
+### 3. Candidate Details, Reports & Dashboard
+- Open an individual candidate's detailed analysis from the batch results.
+- Review readability and match scores, skills, keyword counts, formatting issues, and suggestions.
+- Export candidate rankings and screening results to CSV.
+- View batch statistics and match-score distributions.
+- Review recent batch-processing history.
 
-## ✨ Features
+### 4. Security, Performance & Testing
+- Keep API keys in environment variables rather than source code.
+- Validate supported file types and apply upload-size limits.
+- Limit batch-processing concurrency and handle individual file failures.
+- Avoid storing uploaded resumes in the repository.
+- Run automated tests for scoring consistency and screening behavior.
 
-- 📄 Upload resumes in PDF and DOCX formats
-- 🎯 Analyze resumes against a specific Job Description
-- 📊 Job-dependent ATS Match Score
-- 📈 Resume Readability / Strength Score
-- 🔍 Identify matching and missing skills
-- 🧠 Categorize technical, soft, and tool skills
-- ⚠️ Detect resume formatting and ATS readability issues
-- 🤖 AI-powered improvement suggestions using Groq
-- 📊 Interactive charts using Chart.js
-- 🔒 Environment-based API key configuration
-- 🌐 Live deployment using Render
+### 5. AI Career & Skill Recommendations
+- Identify skill gaps against job requirements.
+- Generate staged learning roadmaps and course-topic suggestions.
+- Explain job suitability using job-related evidence.
+- Provide career guidance in English, Telugu, and Hindi.
+- Use Groq-powered assistance when configured, with fallback guidance when it is unavailable.
 
----
+## Technology Stack
 
-## 📸 Application Screenshots
+- **Backend:** Node.js, Express
+- **Frontend:** HTML, CSS, JavaScript
+- **Resume parsing:** PDF and DOCX parsing libraries
+- **Charts:** Chart.js
+- **AI assistance:** Groq API (optional)
+- **Testing:** Node.js test scripts
+- **Optional service:** Python-based AI components
 
-### 🏠 Dashboard
+## Getting Started
 
-![Dashboard](screenshots/dashboard.png)
+### Prerequisites
+- Node.js and npm
+- Git
+- A Groq API key, if AI-powered recommendations are required
 
-### 📊 ATS Analysis Results
+### Installation
 
-![ATS Analysis Results](screenshots/ats-results.png)
+Clone the repository:
 
-### 🧠 Skills Analysis
+```bash
+git clone https://github.com/Vignesh-130/Resume-Analyzer-2.0.git
+cd Resume-Analyzer-2.0
+```
 
-![Skills Analysis](screenshots/skills-analysis.png)
-
-### 🤖 AI-Powered Suggestions
-
-![AI Suggestions](screenshots/ai-suggestions.png)
-
-### 🎯 Score Analysis
-
-![Score Analysis](screenshots/score-analysis.png)
-
----
-
-## 🎯 Project Overview
-
-The AI-Powered Smart Hiring Assistant is designed to help job seekers understand how well their resume matches a specific job description.
-
-Unlike a fixed resume scoring system, the application separates **resume quality** from **job-specific compatibility**.
-
-The same resume can receive different ATS Match Scores when evaluated against different job descriptions.
-
-### Example
-
-```text
-Resume + Java Full Stack JD
-          ↓
-      ATS Match Score
-          ↓
-Resume + Python Developer JD
-          ↓
-      Different Score
-
-
-## Block 2: Candidate ranking and categorization
-
-Batch screening accepts a job description, number of candidates to select, minimum job-match score (0–100), and minimum matched-skill count. Successful analyses are ranked by match score (ties are resolved by filename for repeatable ordering). Candidates are categorized as **Selected**, **Eligible but Not Selected**, or **Low Match**; invalid, unreadable, and duplicate files are categorized as **Processing Failed** (duplicates are explained separately). The dashboard provides category counts, filename search, status filtering, selection explanations, candidate detail views, and CSV export. These rules are configurable and should be reviewed for job relevance and fairness; scores are decision support, not automatic hiring decisions.
-
-## Groq API key
-
-Do not add the API key to source code or commit a real `.env` file. When all blocks are complete, create a local `.env` file from `.env.example` and add your own key as `GROQ_API_KEY=...`. The `.env` file is ignored by Git. Keep the key private and rotate it if it was exposed.
-
-## Block 3 — Candidate Details, Reports & Dashboard
-
-- Batch candidate **View Details** shows the existing analysis payload for that specific candidate, including readability/match/overall scores, matched and missing skills, technical/tool/soft skills, keyword counts, detected resume sections/contact signals, formatting issues, suggestions, and an extracted-text preview.
-- **Export CSV** downloads batch ranks, scores, screening statuses, selection explanations, matched/missing skills, and processing errors.
-- The recruiter dashboard visualizes candidate status breakdown and match-score bands using Chart.js.
-- Batch processing history stores only aggregate counts and timestamps in the current browser (`localStorage`), with a Clear history control. It does not save candidate filenames, resume text, or job descriptions. Clearing browser data or switching browsers/devices clears or separates this history.
-- Automated scoring-separation tests use `tests/fixtures/synthetic-resume.docx`; they do not need private files in `uploads/`.
-
-### Testing
-
-Run `npm install` followed by `npm test`. The test script checks JavaScript syntax and verifies that readability is independent of the job description and repeated identical inputs return the same scores. The fixture is synthetic and is intended for repeatable automated testing, not as evidence of real-world hiring accuracy.
-
-
-## Block 4: Security, performance and testing
-
-- Resume uploads are held in memory and are not written to an uploads folder by this server. Avoid logging resume contents, extracted text, API keys, or full parser errors.
-- `.env` is ignored by Git. Keep `GROQ_API_KEY` private; use `.env.example` as a template and never commit the populated `.env` file.
-- Uploads accept PDF/DOCX only, with a 5 MB per-file limit and a maximum of 20 files per batch. Basic file signatures are checked before extraction.
-- Batch files are analyzed sequentially to cap parser/AI concurrency, and simultaneous batch requests are limited by `MAX_ACTIVE_BATCHES` (default 2). Upload endpoints also have a basic per-IP request throttle.
-- HTTP security headers are set; responses involving candidate analysis use `Cache-Control: no-store`. Same-origin local use is the default. Configure `CORS_ORIGIN` only for a trusted separate frontend origin.
-- The optional Python AI service is not called by the current Node.js request path, so it is intentionally not started as part of the default workflow. Groq enrichment is optional and deterministic suggestions remain available when no key is configured.
-
-Run the checks from the folder containing `package.json`:
+Install dependencies:
 
 ```bash
 npm install
-npm test
+```
+
+Create a local `.env` file in the project root:
+
+```dotenv
+GROQ_API_KEY=your_groq_api_key_here
+PORT=3000
+```
+
+Replace the placeholder with your own API key. Never commit the populated `.env` file.
+
+Start the application:
+
+```bash
 npm start
 ```
 
-The automated test checks that readability is stable across different job descriptions, repeated identical inputs produce the same scores, security response headers are present, duplicate batch files are detected, and the shortlist limit is respected. It uses only the committed synthetic DOCX fixture, not private resumes. These checks are a baseline and do not prove production security or hiring validity.
+Open the local URL shown in the terminal. If the server uses port 3000, the address is typically `http://localhost:3000`.
 
+### Run Tests
 
-## Block 5 — AI Career & Skill Recommendations
+```bash
+npm test
+```
 
-Candidate details include an English/Telugu/Hindi career guidance action. It uses missing/matched skills to generate a short learning roadmap, course-topic suggestions, and a cautious job-suitability explanation. When `GROQ_API_KEY` is configured, Groq can provide AI-assisted wording; otherwise, deterministic multilingual fallback guidance is returned. The guidance endpoint sends skill lists and a limited job-description excerpt to Groq, not the resume text or contact details. Do not treat generated guidance as a hiring decision, and verify course offerings before enrolling.
+Tests provide repeatable checks of supported functionality. Passing automated tests does not establish real-world hiring accuracy or guarantee production security.
 
-Batch candidate skill badges use the same visual categories as the single-resume screen: technical skills are cyan, soft skills are pink, and tools are yellow. Missing skills use the known job-skill category when available.
+## Configuration and Privacy
+
+- Keep `.env` out of Git using `.gitignore`.
+- Use `.env.example` to document required environment variables without real secrets.
+- Do not commit real resumes, extracted personal information, API keys, or private logs.
+- Review the project's data-retention and access-control requirements before processing real candidate data.
+- Treat match scores and generated career guidance as decision-support information, not definitive hiring decisions.
+
+## Project Limitations
+
+Resume extraction and scoring can be affected by document layout, missing information, and the quality of the job description. Recommendations should be reviewed by a person, and eligibility criteria should be relevant to the role and applied consistently.
+
+## Future Improvements
+
+- More comprehensive automated and integration tests
+- Improved accessibility and responsive design
+- Persistent, privacy-conscious recruiter history
+- Expanded skill taxonomies and verified learning resources
+- Further evaluation of recommendation quality and fairness
+
+## Author
+
+**Vignesh Pettlu**
+
+GitHub: https://github.com/Vignesh-130
+
+---
+
+*Resume Analyzer 2.0 is an educational software project intended to support resume improvement and recruitment workflows. It does not guarantee employment, candidate suitability, or hiring outcomes.*
