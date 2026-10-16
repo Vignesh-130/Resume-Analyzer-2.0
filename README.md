@@ -1,64 +1,64 @@
-# \# ðŸš€ Resume Analyzer 2.0
+# \# 🚀 Resume Analyzer 2.0
 
 # \### AI-Powered Resume Intelligence, Candidate Screening \& Career Development
 
-#
+# 
 
 # \*\*Transform resumes into actionable career insights.\*\*
 
-#
+# 
 
 # Resume Analyzer 2.0 is an AI-assisted web application designed to help job seekers understand their resume quality and job compatibility while helping recruiters organize and screen multiple candidates. It combines ATS-style resume analysis, skill-gap identification, candidate ranking, interactive dashboards, and multilingual career guidance in one platform.
 
-#
+# 
 
 # The system separates \*\*resume readability\*\* from \*\*job-specific match scoring\*\*, helping users understand both how clearly their resume is structured and how closely its skills align with a target job description.
 
-#
+# 
 
 # \---
 
-#
+# 
 
-# \## âœ¨ Key Highlights
+# \## ✨ Key Highlights
 
-#
+# 
 
-# \- ðŸ“„ \*\*Resume Intelligence\*\* â€” Analyze PDF and DOCX resumes against job descriptions.
+# \- 📄 \*\*Resume Intelligence\*\* — Analyze PDF and DOCX resumes against job descriptions.
 
-# \- ðŸŽ¯ \*\*ATS-Style Scoring\*\* â€” Evaluate resume readability and job-match compatibility separately.
+# \- 🎯 \*\*ATS-Style Scoring\*\* — Evaluate resume readability and job-match compatibility separately.
 
-# \- ðŸ” \*\*Skill-Gap Analysis\*\* â€” Identify matched skills and missing job-related skills.
+# \- 🔍 \*\*Skill-Gap Analysis\*\* — Identify matched skills and missing job-related skills.
 
-# \- ðŸ‘¥ \*\*Batch Candidate Screening\*\* â€” Process, categorize, and rank multiple resumes.
+# \- 👥 \*\*Batch Candidate Screening\*\* — Process, categorize, and rank multiple resumes.
 
-# \- ðŸ“Š \*\*Interactive Dashboard\*\* â€” Explore candidate statistics and match-score distributions.
+# \- 📊 \*\*Interactive Dashboard\*\* — Explore candidate statistics and match-score distributions.
 
-# \- ðŸ“ \*\*Candidate Reports\*\* â€” Review individual results and export screening data to CSV.
+# \- 📁 \*\*Candidate Reports\*\* — Review individual results and export screening data to CSV.
 
-# \- ðŸ§  \*\*AI-Assisted Career Guidance\*\* â€” Generate skill-development suggestions and learning roadmaps.
+# \- 🧠 \*\*AI-Assisted Career Guidance\*\* — Generate skill-development suggestions and learning roadmaps.
 
-# \- ðŸŒ \*\*Multilingual Guidance\*\* â€” Provide career guidance in English, Telugu, and Hindi.
+# \- 🌐 \*\*Multilingual Guidance\*\* — Provide career guidance in English, Telugu, and Hindi.
 
-# \- ðŸ” \*\*Security-Aware Design\*\* â€” Keep API credentials in environment variables and apply upload controls.
+# \- 🔐 \*\*Security-Aware Design\*\* — Keep API credentials in environment variables and apply upload controls.
 
-#
+# 
 
 # \---
 
-#
+# 
 
-# \## ðŸ§© Project Modules
+# \## 🧩 Project Modules
 
-#
+# 
 
 # \### 1. Resume Analysis Engine
 
-#
+# 
 
 # Evaluates an individual resume against a target job description.
 
-#
+# 
 
 # \- Supports PDF and DOCX resume uploads.
 
@@ -72,15 +72,15 @@
 
 # \- Provides resume improvement suggestions, with optional Groq AI assistance.
 
-#
+# 
 
 # \### 2. Batch Screening \& Candidate Ranking
 
-#
+# 
 
 # Simplifies the initial review of multiple candidates for a job.
 
-#
+# 
 
 # \- Accepts multiple resumes and a common job description.
 
@@ -94,15 +94,15 @@
 
 # \- Helps make screening more organized and repeatable.
 
-#
+# 
 
 # \### 3. Candidate Details, Reports \& Dashboard
 
-#
+# 
 
 # Provides a consolidated view of screening results.
 
-#
+# 
 
 # \- Displays individual candidate analysis details.
 
@@ -114,15 +114,15 @@
 
 # \- Maintains a browser-based history of batch processing summaries.
 
-#
+# 
 
 # \### 4. Security, Performance \& Testing
 
-#
+# 
 
 # Introduces safeguards and automated checks for the application workflow.
 
-#
+# 
 
 # \- Restricts supported resume formats and upload sizes.
 
@@ -134,15 +134,15 @@
 
 # \- Uses automated tests and a synthetic resume fixture to check core scoring and screening behavior.
 
-#
+# 
 
 # \### 5. AI Career \& Skill Recommendations
 
-#
+# 
 
 # Connects resume analysis with practical skill-development guidance.
 
-#
+# 
 
 # \- Identifies potential skill gaps relative to a target job.
 
@@ -156,15 +156,15 @@
 
 # \- Displays categorized skill badges consistently across analysis screens.
 
-#
+# 
 
 # \---
 
-#
+# 
 
-# \## ðŸ› ï¸ Technology Stack
+# \## 🛠️ Technology Stack
 
-#
+# 
 
 # | Component | Technologies |
 
@@ -184,27 +184,27 @@
 
 # | Version control | Git and GitHub |
 
-#
+# 
 
 # \*\*Architecture note:\*\* The default application workflow uses the Node.js backend. The optional Python AI service is not part of the default Node.js request path.
 
-#
+# 
 
 # \---
 
-#
+# 
 
-# \## âš™ï¸ Getting Started
+# \## ⚙️ Getting Started
 
-#
+# 
 
 # \### Prerequisites
 
-#
+# 
 
 # Install the following before running the project:
 
-#
+# 
 
 # \- Node.js and npm
 
@@ -214,11 +214,11 @@
 
 # \- A Groq API key, only if you want to enable Groq-powered assistance
 
-#
+# 
 
 # \### 1. Clone the repository
 
-#
+# 
 
 # ```bash
 
@@ -228,11 +228,11 @@
 
 # ```
 
-#
+# 
 
 # \### 2. Install dependencies
 
-#
+# 
 
 # ```bash
 
@@ -240,15 +240,15 @@
 
 # ```
 
-#
+# 
 
 # \### 3. Configure environment variables
 
-#
+# 
 
 # Create a local `.env` file in the project root, using `.env.example` as a reference.
 
-#
+# 
 
 # ```env
 
@@ -258,15 +258,15 @@
 
 # ```
 
-#
+# 
 
 # Replace the placeholder with your own API key. Keep `.env` private and never commit it to GitHub. If the application supports fallback guidance without a key, you can test that workflow before configuring Groq.
 
-#
+# 
 
 # \### 4. Start the application
 
-#
+# 
 
 # ```bash
 
@@ -274,19 +274,19 @@
 
 # ```
 
-#
+# 
 
 # Open the local address displayed in your terminal. If the server uses port 3000, it will typically be:
 
-#
+# 
 
 # `http://localhost:3000`
 
-#
+# 
 
 # \### 5. Run automated tests
 
-#
+# 
 
 # ```bash
 
@@ -294,19 +294,19 @@
 
 # ```
 
-#
+# 
 
 # The committed synthetic resume fixture supports repeatable testing without using private candidate resumes. Tests provide baseline checks; they do not establish real-world hiring accuracy or guarantee production security.
 
-#
+# 
 
 # \---
 
-#
+# 
 
-# \## ðŸ”’ Privacy, Security \& Responsible Use
+# \## 🔒 Privacy, Security \& Responsible Use
 
-#
+# 
 
 # \- Keep API keys and other secrets out of source control.
 
@@ -320,15 +320,15 @@
 
 # \- Evaluate screening rules for job relevance and fairness.
 
-#
+# 
 
 # \---
 
-#
+# 
 
-# \## ðŸŽ¯ Project Objectives
+# \## 🎯 Project Objectives
 
-#
+# 
 
 # 1\. Improve understanding of resume readability and job-description compatibility.
 
@@ -340,11 +340,11 @@
 
 # 5\. Connect resume analysis with multilingual career-development guidance.
 
-#
+# 
 
-# \## ðŸ”® Future Enhancements
+# \## 🔮 Future Enhancements
 
-#
+# 
 
 # \- Expand resume parsing and skill extraction.
 
@@ -356,28 +356,29 @@
 
 # \- Explore additional career paths and skill-demand analysis.
 
-#
+# 
 
 # \---
 
-#
+# 
 
-# \## ðŸ‘¨â€ðŸ’» Author
+# \## 👨‍💻 Author
 
-#
+# 
 
 # \*\*Vignesh Pettlu\*\*
 
 # Final-Year B.Tech Project
 
-#
+# 
 
 # \*\*Project:\*\* Resume Analyzer 2.0
 
-#
+# 
 
 # \---
 
-#
+# 
 
 # \*Resume Analyzer 2.0 is an educational project intended to support resume improvement, candidate screening, and career planning. It does not guarantee employment or replace human judgment.\*
+
